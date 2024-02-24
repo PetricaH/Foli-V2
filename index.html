@@ -43,6 +43,10 @@
             <h1>Coats</h1>  
         </div>
 
+        <div class="shirts group">
+            <h1>Shirts</h1>  
+        </div>
+
         <div class="pants group">
             <h1>Pants</h1>
         </div>
@@ -56,16 +60,126 @@
         <h1>About Foli: Our Story</h1>
 
         <div class="paragraphs">
-            <p>Foli is fueled by our love for the outdoors and dedication to sustainability. Our commitment is reflected in our use pf 80% recycled materials for crafting high-quality, durable clothing. With a focus on environmental responsibility and quality craftsmanship, every Foli product is a testament to our values.</p>
-            <p>We’re actively engaged in community initiatives and partnerships, working towards a greener outdoor industry. Join us in our mission for a more sustainable future.</p>
-            <p>Thank you for supporting Foli.</p>
-
-            <button class="support-foli-btn">Explore Our Collection</button>
+            <div class="text-part-paragraphs">
+                <p>Foli is fueled by our love for the outdoors and dedication to sustainability. With a focus on environmental responsibility and quality craftsmanship, every Foli product is a testament to our values.</p>
+                <p>We’re actively engaged in community initiatives and partnerships, working towards a greener outdoor industry. Join us in our mission for a more sustainable future.</p>
+                <p>Thank you for supporting Foli.</p>
+            </div>
+            
+            <div class="btn-and-socials-about-section">
+                <button class="support-foli-btn">Support Foli</button>
+                <div class="socials-about-section">
+                    <img src="images/facebook.png">
+                    <img src="images/instagram.png">
+                    <img src="images/twitter.png">
+                </div>
+            </div>
         </div>
 
     </section>
 
+    <section id="contact-section">
+
+        <div class="contact-testi-tips-container">
+
+            <div class="contact-grid-area">
+                <h1>Contact Foli</h1>
+                <form action="submit_contact_form.php" method="post" id="form-part">
+                    <input type="text" id="name" name="name" class="form-input" placeholder="Your Name..." required>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="Your Email..." required>
+                    <input type="message" id="message" name="message" class="form-input" placeholder="Your Message..." required>
+                    <button type="submit" class="form-btn">Send</button>
+                </form>
+            </div>
+
+            <div class="testimonials-grid-area">
+                <h1>Clients About Us</h1>
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel__item">
+                            <div class="top-row">
+                                <p>Foli’s commitment for the environment sets them apart in the outdoor industry.</p>
+                            </div>
+                            <div class="bottom-row">
+                                <p>@name</p>
+                                <div class="reviewer-img">
+                                    <img src="reviewer1.jpg" alt="Reviewer 1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel__item">
+                            <div class="top-row">
+                                <p>Foli’s gear has become my go-to for outdoor adventures.</p>
+                            </div>
+                            <div class="bottom-row">
+                                <p>@name</p>
+                                <div class="reviewer-img">
+                                    <img src="reviewer1.jpg" alt="Reviewer 1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel__item">
+                            <div class="top-row">
+                                <p>Thrilled with the durability and eco-friendly materials used by Foli.</p>
+                            </div>
+                            <div class="bottom-row">
+                                <p>@name</p>
+                                <div class="reviewer-img">
+                                    <img src="reviewer1.jpg" alt="Reviewer 1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel__item">
+                            <div class="top-row">
+                                <p>Impressed with the quality and comfort of Foli’s clothing.</p>
+                            </div>
+                            <div class="bottom-row">
+                                <p>@name</p>
+                                <div class="reviewer-img">
+                                    <img src="reviewer1.jpg" alt="Reviewer 1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel__item">
+                            <div class="top-row">
+                                <p>Highly recommend Foli for everyone who values quality and sustainability.</p>
+                            </div>
+                            <div class="bottom-row">
+                                <p>@name</p>
+                                <div class="reviewer-img">
+                                    <img src="reviewer1.jpg" alt="Reviewer 1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel__item">
+                            <div class="top-row">
+                                <p>Love that Foli prioritizes the sustainability without compromising style.</p>
+                            </div>
+                            <div class="bottom-row">
+                                <p>@name</p>
+                                <div class="reviewer-img">
+                                    <img src="reviewer1.jpg" alt="Reviewer 1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tips-grid-area">
+                <p></p>
+                <p></p>
+                <p></p>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section id="sadad"></section>
+
 </main>
 
+<script src="script.js"></script>
 </body>
 </html>

@@ -149,21 +149,26 @@ html {
     gap: 0px 0px; 
     grid-template-areas: 
     "coats pants"
-    "coats shoes"; 
+    "shirts shoes"; 
 }
 
 .coats {
-    background-color: rgba(12, 41, 32, .5);
+    background-color: RGBA(0, 128, 0, .5);
     grid-area: coats;
 }
 
+.shirts {
+    background-color: RGBA(0, 200, 0, .5);
+    grid-area: shirts;
+}
+
 .pants {
-    background-color: rgba(0, 112, 45, .5);
+    background-color: RGBA(50, 205, 50, .5);
     grid-area: pants;
 }
 
 .shoes {
-    background-color: rgba(92, 55, 0, .5);
+    background-color: RGBA(60, 179, 113, .5);
     grid-area: shoes;
 }
 
@@ -185,44 +190,238 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     position: relative;
+    background: url("images/about-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#about-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(12, 41, 32, 0.5);
 }
 
 #about-section > h1 {
     font-weight: 400;
     font-size: 2rem;
-    padding-bottom: 80px;
+    padding-bottom: 50px;
+    z-index: 1;
 }
 
 .paragraphs {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1.5fr 0.5fr; 
+    gap: 25px 0px; 
+    grid-template-areas: 
+    "."
+    "."; 
     max-width: 1000px;
     padding-left: 2vw;
     padding-right: 2vw;
+    z-index: 1;
 }
 
-.paragraphs p {
-    font-family: "EB Garamond", serif;
-    font-size: 1.25rem;
+.text-part-paragraphs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.paragraphs > .text-part-paragraphs p {
+    font-size: 1rem;
+    font-weight: 300;
 }
 
 .support-foli-btn {
     background-color: #FFA800;
     outline: none;
     border: none;
-    padding: 20px 25px;
+    padding: 20px 45px;
     font-family: "Readex Pro", sans-serif;
     font-weight: 300;
     cursor: pointer;
-    margin-top: 50px;
-    position: absolute;
-    top: 95%;
+    width: fit-content;
 }
 
 .support-foli-btn:active {
     background-color: #0C2920;
     color: white;
+}
+
+.btn-and-socials-about-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.socials-about-section {
+    display: flex;
+    gap: 5vw;
+}
+
+.socials-about-section img {
+    width: 25px;
+    cursor: pointer;
+}
+
+/* contact section*/
+
+#contact-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+} 
+
+#contact-section h1 {
+    padding-bottom: 50px;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.contact-testi-tips-container {
+    display: grid; 
+    width: 100%;
+    height: 100%;
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas: 
+    "contact testimonials"
+    "tips testimonials"; 
+}
+
+#form-part {
+    position: relative;
+    grid-area: contact;
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 15px 5px; 
+    grid-template-areas: 
+    "name email"
+    "message message"
+    "btn btn"; 
+}
+
+#name {
+    grid-area: name;
+}
+
+#email {
+    grid-area: email;
+}
+
+#message {
+    grid-area: message;
+}
+
+.form-btn {
+    grid-area: btn;
+}
+
+.testimonials-grid-area {
+    grid-area: testimonials;
+}
+
+.tips-grid-area {
+    grid-area: tips;
+}
+
+/*card area*/
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel {
+    display: flex;
+    position: relative;
+}
+
+.carousel__item {
+    width: 300px;
+    height: 400px;
+    background-color: rebeccapurple;
+    margin: 5px;
+    display: none;
+    position: relative;
+}
+
+.carousel__item--selected {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.top-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    padding: 10px;
+}
+
+.top-row p {
+    font-weight: 300;
+}
+.bottom-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 30%;
+}
+
+.bottom-row p,
+.bottom-row div {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.carousel__nav {
+    width: 100%;
+    padding: 20px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
+
+.carousel__button {
+    width: 10px;
+    height: 10px;
+    background-color: #FAA800;
+    opacity: .5;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.carousel__button--selected {
+    opacity: 1;
+}
+
+#sadad {
+    height: 100vh;
+    background-color: black;
 }
