@@ -83,17 +83,23 @@
         <div class="contact-testi-tips-container">
 
             <div class="contact-grid-area">
-                <h1>Contact Foli</h1>
-                <form action="submit_contact_form.php" method="post" id="form-part">
-                    <input type="text" id="name" name="name" class="form-input" placeholder="Your Name..." required>
-                    <input type="email" id="email" name="email" class="form-input" placeholder="Your Email..." required>
-                    <input type="message" id="message" name="message" class="form-input" placeholder="Your Message..." required>
-                    <button type="submit" class="form-btn">Send</button>
-                </form>
+                    <h1>Contact</h1>
+                    <div class="possible-questions">
+                        <p>Got any questions for us?</p>
+                        <p>Need more information about our products?</p>
+                        <p>Want to talk with someone?</p>
+                        <p>Message us!</p>
+                    </div>
+                    <form action="submit_contact_form.php" method="post" id="form-part">
+                        <input type="text" id="name" name="name" class="form-input" placeholder="Your Name..." required>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="Your Email..." required>
+                        <input type="message" id="message" name="message" class="form-input" placeholder="Your Message..." required>
+                        <button type="submit" class="form-btn">Send</button>
+                    </form>
             </div>
 
             <div class="testimonials-grid-area">
-                <h1>Clients About Us</h1>
+                <h1>Clients<br>About<br>Us</h1>
                 <div class="carousel-container">
                     <div class="carousel">
                         <div class="carousel__item">
@@ -167,18 +173,39 @@
             </div>
 
             <div class="tips-grid-area">
-                <p></p>
-                <p></p>
-                <p></p>
-
+                <div class="carousel-container" id="tip-carousel-container">
+                    <div class="carousel" id="tip-carousel">
+                        <div class="carousel__item" id="tip-one">
+                            <p>All orders ship within 1-3 working days and come with a tracking number.</p>
+                        </div>
+                        <div class="carousel__item" id="tip-two">
+                            <p>If you change your mind, you can return the products in 14 working days.</p>
+                        </div>
+                        <div class="carousel__item" id="tip-three">
+                            <p>Create an account so you don't miss our offers and take our gift.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>
     </section>
-
-    <section id="sadad"></section>
-
 </main>
+
+<footer>
+    <div class="footer-container">
+        <div class="text-side-footer">
+            <p>3275 Denargo St. Denver, CO 80216<br>
+                contact@foli.com<br>
+                @FOLI Wear LLC 2024</p>
+        </div>
+        <div class="payment-methods-side-footer">
+            <span>Google Pay</span>
+            <span>PayPal</span>
+            <span>MasterCard</span>
+        </div>
+    </div>
+</footer>
 
 <script src="script.js"></script>
 </body>
