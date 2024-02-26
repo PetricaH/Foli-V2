@@ -150,6 +150,8 @@ html {
     grid-template-areas: 
     "coats pants"
     "shirts shoes"; 
+    background: url("images/about-bg.jpg");
+    background-size: cover;
 }
 
 @media (min-width:1000px) {
@@ -160,27 +162,26 @@ html {
 }
 
 .coats {
-    background-color: RGBA(0, 128, 0, .5);
     grid-area: coats;
 }
 
 .shirts {
-    background-color: RGBA(0, 200, 0, .5);
     grid-area: shirts;
 }
 
 .pants {
-    background-color: RGBA(50, 205, 50, .5);
     grid-area: pants;
 }
 
 .shoes {
-    background-color: RGBA(60, 179, 113, .5);
     grid-area: shoes;
 }
 
 .group {
     position: relative;
+    border-radius: 20px;
+    margin: 5px;
+    backdrop-filter: blur(50px);
 }
 
 .group > h1 {
@@ -445,6 +446,7 @@ html {
     margin: 5px;
     display: none;
     position: relative;
+    border-radius: 20px;
 }
 
 .carousel__item--selected {
@@ -465,12 +467,20 @@ html {
 .top-row p {
     font-weight: 300;
     color: black;
+    text-align: center;
 }
+
 .bottom-row {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     height: 30%;
+}
+
+.reviewer-img img {
+    width: 75px;
+    height: 75px;
 }
 
 .bottom-row p,
@@ -524,7 +534,10 @@ html {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: space-around;
+    gap: 5vw;
+    height: 30vh;
 }
 
 .text-side-footer p,
@@ -534,7 +547,6 @@ html {
 
 .payment-methods-side-footer {
     display: flex;
-    flex-direction: column;
     text-align: right;
     gap: 15px;
 }
@@ -542,4 +554,5 @@ html {
 .payment-methods-side-footer span {
     padding: 15px 20px;
     border: 1px solid white;
+    height: fit-content;
 }
